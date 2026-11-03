@@ -36,3 +36,12 @@ int Interface::getNumber(const std::string& message)
 
     return number;
 }
+
+void Interface::printVariant(const std::vector<std::string>& tasks, int number)
+{
+    std::cout << "\nVariant " << number << ":\n";
+    for (const std::string& task : tasks)
+    {
+        std::cout << task << '\n';
+    }
+}

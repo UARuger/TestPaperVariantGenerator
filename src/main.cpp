@@ -37,11 +37,10 @@ int main()
                 
                 std::cout << "Generating " << variantCount << " variants with " << tasksPerVariant << " tasks each...\n";
                 
-                std::vector<std::string> variant = generator.generateVariant(tasksPerVariant);
-                
-                for (const std::string& task : variant)
+                for (int i = 0; i < variantCount; ++i)
                 {
-                    std::cout << task << '\n';
+                    std::vector<std::string> variant = generator.generateVariant(tasksPerVariant);
+                    Interface::printVariant(variant, i + 1);
                 }
                 break;
             }
