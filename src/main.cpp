@@ -36,6 +36,13 @@ int main()
                 }
                 
                 std::cout << "Generating " << variantCount << " variants with " << tasksPerVariant << " tasks each...\n";
+                
+                std::vector<std::string> variant = generator.generateVariant(tasksPerVariant);
+                
+                for (const std::string& task : variant)
+                {
+                    std::cout << task << '\n';
+                }
                 break;
             }
             case 2:

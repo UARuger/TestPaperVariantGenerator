@@ -1,10 +1,7 @@
 #include "TaskGenerator.hpp"
 #include <fstream>
-
-TaskGenerator::TaskGenerator()
-{
-
-}
+#include <random>
+#include <algorithm>
 
 bool TaskGenerator::loadTasksFromFile(const std::string& filename)
 {
@@ -52,4 +49,18 @@ bool TaskGenerator::validateParameters(int variantCount, int tasksPerVariant) co
     }
 
     return true;
+}
+
+std::vector<std::string> TaskGenerator::generateVariant(int count)
+{
+    std::vector<std::string> result = tasks;
+
+    std::random_device rd;
+    std::mt19937 generator(rd());
+    
+    std::shuffle(result.begin(), result.end(), generator);
+
+    result.resize(count);
+
+    return result;
 }

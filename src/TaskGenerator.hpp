@@ -14,4 +14,5 @@ public:
     std::size_t getTaskCount() const;
     bool hasTasks() const;
     bool validateParameters(int variantCount, int tasksPerVariant) const;
+    std::vector<std::string> generateVariant(int count);
 };
