@@ -19,12 +19,18 @@ int main()
                 break;
             case 0: return 0;
             case 1:
+                if (!generator.hasTasks())
+                {
+                    std::cout << "No tasks loaded. Please load tasks from file first.\n";
+                    break;
+                }
                 std::cout << "Generating variants...\n";
                 break;
             case 2:
                 if (generator.loadTasksFromFile("data/tasks.txt"))
                 {
                     std::cout << "Tasks loaded successfully.\n";
+                    std::cout << "Total tasks loaded: " << generator.getTaskCount() << '\n';
                 }
                 else
                 {

@@ -28,3 +28,13 @@ bool TaskGenerator::loadTasksFromFile(const std::string& filename)
 
     return true;
 }
+
+std::size_t TaskGenerator::getTaskCount() const
+{
+    return tasks.size();
+}
+
+bool TaskGenerator::hasTasks() const
+{
+    return !tasks.empty();
+}
