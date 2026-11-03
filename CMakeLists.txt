@@ -5,6 +5,7 @@ project(TestPaperVariantGenerator LANGUAGES CXX)
 add_executable(TestPaperVariantGenerator
     src/main.cpp
     src/Interface.cpp
+    src/TaskGenerator.cpp
 )
 
 target_compile_features(TestPaperVariantGenerator PRIVATE cxx_std_17)

@@ -1,8 +1,10 @@
 #include <iostream>
 #include "Interface.hpp"
+#include "TaskGenerator.hpp"
 
 int main() 
 {
+    TaskGenerator generator;
     int choice = 1;
     
     while(choice != 0)
