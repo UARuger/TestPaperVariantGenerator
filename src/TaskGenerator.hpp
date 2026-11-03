@@ -13,4 +13,5 @@ public:
     bool loadTasksFromFile(const std::string& filename);
     std::size_t getTaskCount() const;
     bool hasTasks() const;
+    bool validateParameters(int variantCount, int tasksPerVariant) const;
 };

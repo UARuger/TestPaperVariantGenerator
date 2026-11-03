@@ -38,3 +38,18 @@ bool TaskGenerator::hasTasks() const
 {
     return !tasks.empty();
 }
+
+bool TaskGenerator::validateParameters(int variantCount, int tasksPerVariant) const
+{
+    if (variantCount <= 0 || tasksPerVariant <= 0)
+    {
+        return false;
+    }
+
+    if (static_cast<std::size_t>(tasksPerVariant) > tasks.size())
+    {
+        return false;
+    }
+
+    return true;
+}

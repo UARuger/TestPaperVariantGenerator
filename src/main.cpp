@@ -19,13 +19,25 @@ int main()
                 break;
             case 0: return 0;
             case 1:
+            {
                 if (!generator.hasTasks())
                 {
                     std::cout << "No tasks loaded. Please load tasks from file first.\n";
                     break;
                 }
-                std::cout << "Generating variants...\n";
+
+                int variantCount = Interface::getNumber("Enter the number of variants to generate: ");
+                int tasksPerVariant = Interface::getNumber("Enter the number of tasks per variant: ");
+
+                if (!generator.validateParameters(variantCount, tasksPerVariant))
+                {
+                    std::cout << "Invalid generation parameters.\n";
+                    break;
+                }
+                
+                std::cout << "Generating " << variantCount << " variants with " << tasksPerVariant << " tasks each...\n";
                 break;
+            }
             case 2:
                 if (generator.loadTasksFromFile("data/tasks.txt"))
                 {
