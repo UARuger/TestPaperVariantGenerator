@@ -6,6 +6,7 @@ void Interface::printMenu()
         "=== Task Generator ===\n"
         "0. Exit\n"
         "1. Generate variants\n"
+        "2. Load tasks from file\n"
         "======================\n"
     );
 }

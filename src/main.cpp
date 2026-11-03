@@ -21,6 +21,16 @@ int main()
             case 1:
                 std::cout << "Generating variants...\n";
                 break;
+            case 2:
+                if (generator.loadTasksFromFile("data/tasks.txt"))
+                {
+                    std::cout << "Tasks loaded successfully.\n";
+                }
+                else
+                {
+                    std::cout << "Failed to load tasks from file.\n";
+                }
+                break;
         }
     }
 

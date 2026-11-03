@@ -10,4 +10,5 @@ private:
 
 public:
     TaskGenerator();
+    bool loadTasksFromFile(const std::string& filename);
 };
