@@ -9,7 +9,6 @@ private:
     std::vector<std::string> tasks;
 
 public:
-    TaskGenerator();
     bool loadTasksFromFile(const std::string& filename);
     std::size_t getTaskCount() const;
     bool hasTasks() const;
